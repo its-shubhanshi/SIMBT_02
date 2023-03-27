@@ -1,0 +1,180 @@
+*,
+::after,
+::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
+}
+:disabled {
+  cursor: not-allowed;
+}
+iframe {
+  border: none;
+}
+
+@font-face {
+  font-family: mr;
+  src: url(../fonts/Montserrat-Regular.woff2);
+  font-display: swap;
+}
+@font-face {
+  font-family: mb;
+  src: url(../fonts/Montserrat-Bold.woff2);
+  font-display: swap;
+}
+@font-face {
+  font-family: msb;
+  src: url(../fonts/Montserrat-SemiBold.woff2);
+  font-display: swap;
+}
+body {
+  font: 16px mr, sans-serif;
+  background: #fff4ea;
+}
+h1,
+h2,
+h3,
+h4,
+strong,
+b,
+th {
+  font-family: msb, sans-serif;
+}
+p {
+  font-family: mr, sans-serif;
+}
+.container {
+  padding: 0 15px;
+}
+.todo {
+  max-width: 800px;
+  min-height: 60vh;
+  padding: 0 15px;
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 20px 50px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -15px;
+}
+
+.row [class^="col"] {
+  flex: 1 1 auto;
+  padding: 0 15px;
+}
+.row .col-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1Text {
+  color: #121212;
+  margin-top: 50px;
+  text-align: center;
+  font-family: mb, sans-serif;
+  font-size: 35px;
+  color: #2b46bd;
+}
+input:focus {
+  outline-color: #2b6beb;
+}
+#taskForm {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#taskForm #taskInput {
+  border: 2px solid #2b6beb;
+  border-radius: 5px;
+  width: 72%;
+  padding: 8px 10px;
+  color: #2b6beb;
+  font: 18px msb, sans-serif;
+  background: #e8f0fe;
+}
+.todo input[type="submit"] {
+  color: #fff;
+  background: #2b6beb;
+  border: none;
+  padding: 10px 30px;
+  font: 20px mb, sans-serif;
+  letter-spacing: 1px;
+}
+
+.taskList .task {
+  display: flex;
+  background-color: #c5e1e5;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.taskList .content {
+  width: 70%;
+}
+.taskList input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #000;
+}
+.taskList button {
+  padding: 8px 15px;
+  margin: 0 5px;
+  background-color: #2b46bd;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+@media screen and (max-width: 460px) {
+  .col-p-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .todo {
+    padding: 10px 0;
+  }
+  #taskForm {
+    display: block;
+    text-align: center;
+  }
+  #taskForm #taskInput {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .taskList .task {
+    display: block;
+    text-align: center;
+  }
+  .taskList .content {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .taskList input {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
